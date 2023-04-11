@@ -1,0 +1,10 @@
+.Form{
+    
+    background-color:rgb(238, 238, 238);
+    width: 750px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    height: auto;
+
+}
