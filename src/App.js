@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./components/form";
+import Preview from "./components/preview";
 import "./styles/App.css"
 
 class App extends React.Component{
@@ -14,6 +15,7 @@ render(){
       </header>
       <div className="Form-preview-container">
       <Form/>
+      <Preview/>
       </div>
       
 

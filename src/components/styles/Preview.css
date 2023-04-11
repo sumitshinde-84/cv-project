@@ -1,9 +1,9 @@
 .preview{
     background-color:rgb(238, 238, 238);
     width: 750px;
-    height: 500px;
+    height: 1000px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    height: auto;
+    
 }
