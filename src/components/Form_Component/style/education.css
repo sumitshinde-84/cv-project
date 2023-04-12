@@ -1,4 +1,4 @@
-.education{
+.experience{
     display: flex;
     flex-direction: column;
     width: 40vw;
@@ -10,13 +10,36 @@
 }
 
 
-.education .input{
+.experience .input{
     width: 700px;
     height: 30px;
     background-color: white;
     border: none;
     border-radius: 3px;
 
+}
+
+#Description{
+
+  height: 80px;
+  border-radius: 5px;
+
+}
+
+#Description{
+
+  
+  padding-bottom: 50px;
+  
+}
+
+#Description:placeholder-shown{
+
+  height: 80px;
+  border-radius: 5px;
+  text-align: left;
+  padding-bottom: 60px;
+  
 }
 
 .input:placeholder-shown{
@@ -58,3 +81,4 @@
     width: 700px;
     text-align: left;
 }
+

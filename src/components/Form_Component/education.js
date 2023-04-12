@@ -21,6 +21,7 @@ render(){
             <input type="tel" className="input" id="Phone" placeholder="Phone number"/>
             <input type="email" className="input" id="Email" placeholder="Email"/>
             <input type="text" className="input" id="Description" placeholder="Description"/>
+            
         </div>
     )
 }
