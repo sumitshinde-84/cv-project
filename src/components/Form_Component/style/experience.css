@@ -19,66 +19,44 @@
 
 }
 
-#Description{
-
-  height: 80px;
-  border-radius: 5px;
-
-}
-
-#Description{
-
-  
-  padding-bottom: 50px;
-  
-}
-
-#Description:placeholder-shown{
-
-  height: 80px;
-  border-radius: 5px;
-  text-align: left;
-  padding-bottom: 60px;
-  
-}
-
-.input:placeholder-shown{
-    padding: 10px;
-}
-
-.custom-file-input::-webkit-file-upload-button {
-    visibility: hidden;
-  }
-  .custom-file-input{
-    width: 700px;
-  }
-
-  .custom-file-input::before {
-    content: 'Photo';
-    width: 680px;
-    display: inline-block;
-    background: white;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 8px;
-    outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    
-     
-    font-size: 10pt;
-  }
-  .custom-file-input:hover::before {
-    border-color: black;
-  }
-  .custom-file-input:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-  }
-  
 
 .experience h2{
     width: 700px;
     text-align: left;
 }
 
+.add{
+    padding: 12px 335px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+
+  .add:hover{
+    padding: 12px 335px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+  
+  .delete{
+    padding: 12px 328px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+
+  .delete:hover{
+    padding: 12px 328px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
