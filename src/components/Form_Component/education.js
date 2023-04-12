@@ -16,11 +16,8 @@ render(){
             <input type="text" className="input" id="FirstName" placeholder="First Name"/>
             <input type="text" className="input" id="LastName" placeholder="Last Name"/>
             <input type="text" className="input" id="Title" placeholder="Title"/>
-            <input class="custom-file-input" type="file"/>
             <input type="text" className="input" id="Address" placeholder="Address"/>
-            <input type="tel" className="input" id="Phone" placeholder="Phone number"/>
-            <input type="email" className="input" id="Email" placeholder="Email"/>
-            <input type="text" className="input" id="Description" placeholder="Description"/>
+          
             
         </div>
     )

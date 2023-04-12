@@ -1,0 +1,65 @@
+.person_info{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    color:  rgb(51, 51, 51);
+    text-align: left;
+}
+
+
+.person_info .input{
+    width: 700px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+
+}
+
+.input:placeholder-shown{
+    padding: 10px;
+}
+
+.experience h2{
+    width: 700px;
+    text-align: left;
+}
+
+.add{
+    padding: 12px 335px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+
+  .add:hover{
+    padding: 12px 335px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+  
+  .delete{
+    padding: 12px 328px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
+
+  .delete:hover{
+    padding: 12px 328px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+  }
