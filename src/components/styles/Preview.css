@@ -1,9 +1,12 @@
 .preview{
     background-color:rgb(238, 238, 238);
     width: 750px;
-    height: 1000px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
+    height: 1200px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    grid-template-rows: 140px 1fr 1fr 1fr;
+
     
 }
