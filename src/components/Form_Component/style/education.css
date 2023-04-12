@@ -8,3 +8,20 @@
   color:  rgb(51, 51, 51);
   text-align: left;
 }
+
+.education .input{
+  width: 700px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.input:placeholder-shown{
+  padding: 10px;
+}
+
+.education h2{
+  width: 700px;
+  text-align: left;
+}

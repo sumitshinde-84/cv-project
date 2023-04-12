@@ -18,7 +18,12 @@ render(){
 
             <PersonlInfo/>
             <Experience/>
-          
+            <Education/>
+            <div className="buttons-sect">
+            <button className="Genrate">Genrate PDF</button>
+            <button className="LoadExample">Load Example</button>
+            <button className="Reset">Reset</button>
+            </div>
         </div>
 
     )

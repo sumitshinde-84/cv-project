@@ -20,7 +20,7 @@ render(){
             <input className="input" type="text" id="To" placeholder="To"/>
             <button className="add">Add</button>
             <button className="delete">Delete</button>
-            
+           
 
         </div>
     )
