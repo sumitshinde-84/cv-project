@@ -1,5 +1,37 @@
 .personalInfoPreview{
 grid-row: 2/5;
 grid-column: 2/3;
-background-color: rgb(204, 204, 204);;
+background-color: rgb(204, 204, 204);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+
+}
+
+.profile{
+    
+    width: 200px;
+    height: auto;
+    
+}
+
+.profile img{
+ width: 200px;
+ height: auto;
+}
+
+.personalDetailDivForBottomBorder{
+    font-family: Nunito, sans-serif;
+    color: rgb(20, 62, 114);;
+    border: none;
+    border-bottom: 1px solid rgba(20, 62, 114, 0.157);
+    padding: 2px;
+}
+
+.personalDetailsSubInfoTitle{
+    font-family: Nunito, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 3px;
 }
