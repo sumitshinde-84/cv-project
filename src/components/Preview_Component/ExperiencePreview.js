@@ -14,9 +14,7 @@ render(){
 return (
     
     <div className="experiencePreview">
-        <div className="experiencePreviewBoxBorder">
-            <h3>Experience</h3>
-        </div>
+       
         <div className="experienceTabel">
             <div className="TimeFrame">
                 <p id="timeFrame">{from +"-"+ to}</p>

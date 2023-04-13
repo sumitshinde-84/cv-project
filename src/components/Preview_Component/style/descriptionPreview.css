@@ -1,18 +1,20 @@
 .DescriptionPreview{
-    padding: 15px;
+    padding:0px 15px ;
    
 }
 
-.DescriptionPreview h3{
+.DescriptionPreviewBoxForBorder h3{
     font-family: Nunito, sans-serif;
     color: rgb(20, 62, 114);;
 }
 
 .DescriptionPreviewBoxForBorder{
-    padding: 5px 0px;
+    padding: 2px 2px ;
+    margin-left: 10px;
     border: none;
     border-bottom: 1px solid rgba(20, 62, 114, 0.288);
     margin-bottom: 10px;
+    width: 480px;
 }
 
 .DescriptionPreview p{

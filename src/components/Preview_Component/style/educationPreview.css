@@ -1,23 +1,23 @@
-.experiencePreview {
-    padding:0px 10px;
-   
+.educationPreview {
+    padding:0px 15px;
+    
   }
 
-.experienceTabel{
+.educationTabel{
  display: flex;
  column-gap: 50px;
  padding: 10px;
 
 }
 
-.experiencePreviewBoxBorder h3{
+.educationPreviewBoxBorder h3{
     font-family: Nunito, sans-serif;
   color: rgb(20, 62, 114);;;
 }
 
-.experiencePreviewBoxBorder{
+.educationPreviewBoxBorder{
     padding: 2px 2px ;
-    margin-left: 10px;
+    margin-left: 20px;
     border: none;
     border-bottom: 1px solid rgba(20, 62, 114, 0.288);
     margin-bottom: 10px;
@@ -25,20 +25,25 @@
 }
 
 
-#timeFrame{
+#timeFrameEducation{
     font-weight: 600;
     font-family: Nunito, sans-serif; ;
     font-size: 17px;
 }
  
 
-#positionPreview{
+#universityPreview{
     font-weight: 600;
     font-family: Nunito, sans-serif; ;
     font-size: 17px;
 }
 
-#companyPreview{
+#degreePreview{
+    font-family: Nunito, sans-serif; 
+    font-weight: 300;
+}
+
+#subjectPreview{
     font-family: Nunito, sans-serif; 
     font-weight: 300;
 }
