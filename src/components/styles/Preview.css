@@ -1,5 +1,5 @@
 .preview{
-    position: sticky;
+     position: sticky;
     top: 0;
     background-color:rgb(238, 238, 238);
     width: 750px;
@@ -11,4 +11,11 @@
     grid-template-rows: 140px 1fr 1fr 1fr;
 
     
+}
+
+
+.otherInfo{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }

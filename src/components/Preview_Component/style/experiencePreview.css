@@ -1,0 +1,40 @@
+.experiencePreview {
+    padding: 10px;
+   
+  }
+
+.experienceTabel{
+ display: flex;
+ column-gap: 50px;
+ padding: 10px;
+
+}
+
+.experiencePreview h3{
+  color: rgb(20, 62, 114);;;
+}
+
+.experiencePreviewBoxBorder{
+    border: none;
+    border-bottom: 1px solid rgba(20, 62, 114, 0.299);
+    padding: 10px;
+}
+
+
+#timeFrame{
+    font-weight: 600;
+    font-family: Nunito, sans-serif; ;
+    font-size: 17px;
+}
+ 
+
+#positionPreview{
+    font-weight: 600;
+    font-family: Nunito, sans-serif; ;
+    font-size: 17px;
+}
+
+#companyPreview{
+    font-family: Nunito, sans-serif; 
+    font-weight: 300;
+}
