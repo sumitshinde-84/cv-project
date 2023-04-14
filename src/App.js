@@ -2,6 +2,9 @@ import React from "react";
 import Form from "./components/form";
 import Preview from "./components/preview";
 import "./styles/App.css"
+import jsPDF from 'jspdf';
+import ReactDOM from 'react-dom';
+import html2canvas from "html2canvas";
 
 class App extends React.Component{
 
@@ -41,37 +44,45 @@ class App extends React.Component{
       educationCount:[0],
       experienceSectCount: [0],
     };
+
+    this.childComponent1Ref = React.createRef();
   }
 
+  genratePdf = () => {
+    const element = document.querySelector(".preview");
+    const pdfWidth = element.offsetWidth;
+    const pdfHeight = element.offsetHeight;
+    const pdf = new jsPDF("p", "pt", [pdfWidth, pdfHeight]);
+  
+    html2canvas(element).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+  
+      pdf.save("document.pdf");
+    });
+  };
 
   onChangeHandler=(obj)=>{
     this.setState({
-      
-       ...obj
-      
+      ...obj
     })
   }
 
-render(){
-  console.log(this.state.personalInfo)
-  return(
-    <div className="main">
-      <header>
-          <h1 id="Main-title">CV CREATER</h1>
-      </header>
-      <div className="Form-preview-container">
-      <Form onChangeHandler={this.onChangeHandler} />
-      <Preview personalInfo={this.state.personalInfo}  experienceCollection={this.state.experienceCollection} educationCollection={this.state.educationCollection}/>
+  render(){
+    console.log(this.state.personalInfo)
+    return(
+      <div className="main">
+        <header>
+            <h1 id="Main-title">CV CREATOR</h1>
+        </header>
+        <div className="Form-preview-container">
+          
+          <Form genratePdf={this.genratePdf}   />
+          <Preview   personalInfo={this.state.personalInfo}  experienceCollection={this.state.experienceCollection} educationCollection={this.state.educationCollection}  />
+        </div>
       </div>
-      
-
-    </div>
-  )
-
+    )
+  }
 }
 
-
-}
-
-
-export default App
+export default App;

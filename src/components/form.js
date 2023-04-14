@@ -43,6 +43,7 @@ class Form extends React.Component {
       experienceSectCount: [0],
     };
   }
+  
 
   onChangeInputPersonalInfo = (event) => {
     if(event.target.name==='profile'){
@@ -145,6 +146,7 @@ class Form extends React.Component {
 
     
   };
+  
 
 deleteExperienceSect = () => {
     let experienceSectCount = [...this.state.experienceSectCount];
@@ -159,6 +161,7 @@ deleteExperienceSect = () => {
     }, () => {
         this.props.onChangeHandler(this.state);
     });
+    
 }
 
     deleteEducationSect = ()=>{
@@ -175,7 +178,9 @@ deleteExperienceSect = () => {
     }
 
   render() {
-    return (
+    const {genratePdf} = this.props
+    
+     return (
       <div className="Form">
         <PersonlInfo personalInfo={this.state.personalInfo} onChangeInputPersonalInfo={this.onChangeInputPersonalInfo} />
 
@@ -205,7 +210,7 @@ deleteExperienceSect = () => {
         <button onClick={this.handleEducationSect} className="add">Add</button>
         <button onClick={this.deleteEducationSect} className="delete">Delete</button>
         <div className="buttons-sect">
-          <button className="Genrate">Generate PDF</button>
+          <button onClick={genratePdf} className="Genrate">Generate PDF</button>
           <button className="LoadExample">Load Example</button>
           <button className="Reset">Reset</button>
         </div>

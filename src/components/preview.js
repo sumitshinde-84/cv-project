@@ -8,16 +8,24 @@ import EducationPreview from "./Preview_Component/EducationPreview";
 import Education from "./Form_Component/education";
 import { v4 as uuidv4 } from 'uuid';
 
+
 class Preview extends React.Component {
 
   constructor(props) {
     super(props);
+
+    
   }
 
+  
+  
+
   render() {
+    
     const { personalInfo, experienceCollection,educationCollection } = this.props;
     return (
-      <div className="preview">
+     
+      <div  className="preview" >
         <Header firstName={personalInfo.firstName} lastName={personalInfo.lastName} title={personalInfo.title} profile={personalInfo.photo} />
         <PersonalInfoPreveiw profile={personalInfo.profile} address={personalInfo.address} phoneNumber={personalInfo.phone} email={personalInfo.email} />
         <div className="otherInfo">
@@ -54,7 +62,7 @@ class Preview extends React.Component {
         </div>
 
       </div>
-
+     
     )
   }
 }
