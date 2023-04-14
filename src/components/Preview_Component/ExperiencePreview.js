@@ -10,7 +10,7 @@ constructor(props){
 
 render(){
 
-    const {from, to ,position,company} = this.props
+    const {position,from,to,company} = this.props
 return (
     
     <div className="experiencePreview">

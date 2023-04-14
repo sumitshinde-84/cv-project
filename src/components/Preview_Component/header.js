@@ -7,11 +7,11 @@ class Header extends React.Component {
     }
 
     render() {
-        const { firstName, lastName, position } = this.props;
+        const { firstName, lastName, title } = this.props;
         return (
             <div className="header">
                 <h1>{firstName + " " + lastName}</h1>
-                <h2>{position}</h2>
+                <h2>{title}</h2>
             </div>
         );
     }

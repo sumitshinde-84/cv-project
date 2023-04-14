@@ -10,7 +10,7 @@ constructor(props){
 
 render(){
 
-    const {from, to ,university,subject,degree} = this.props
+    const {from, to ,university,subject,degree,city} = this.props
 return (
     
     <div className="educationPreview">
@@ -20,7 +20,7 @@ return (
                 <p id="timeFrameEducation">{from +"-"+ to}</p>
             </div>
             <div className="universityAndDegree">
-                <p id="universityPreview">{university}</p>
+                <p id="universityPreview">{university}{","+city}</p>
                 <p id="degreePreview">{degree}</p>
                 <p id="subjectPreview">{subject}</p>
             </div>
