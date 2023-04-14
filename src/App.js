@@ -77,7 +77,7 @@ class App extends React.Component{
         </header>
         <div className="Form-preview-container">
           
-          <Form genratePdf={this.genratePdf}   />
+          <Form genratePdf={this.genratePdf} onChangeHandler={this.onChangeHandler}  />
           <Preview   personalInfo={this.state.personalInfo}  experienceCollection={this.state.experienceCollection} educationCollection={this.state.educationCollection}  />
         </div>
       </div>
