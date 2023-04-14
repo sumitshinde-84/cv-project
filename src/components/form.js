@@ -3,15 +3,17 @@ import Education from "./Form_Component/education";
 import "./styles/Form.css";
 import Experience from "./Form_Component/experience.js";
 import PersonlInfo from "./Form_Component/personalInfo";
-import Preview from "./preview";
+
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       personalInfo: {
+
         firstName: "",
         lastName: "",
+        address:"",
         title: "",
         profile: "",
         phone: "",
@@ -43,6 +45,15 @@ class Form extends React.Component {
   }
 
   onChangeInputPersonalInfo = (event) => {
+    if(event.target.name==='profile'){
+      let file = event.target.files[0]
+      let imgUrl = URL.createObjectURL(file)
+      this.setState(
+        {personalInfo:{
+        ...this.state.personalInfo,
+        profile:imgUrl
+      }},()=>{this.props.onChangeHandler(this.state)})
+    }else{
     this.setState(
       {
         personalInfo: {
@@ -53,7 +64,7 @@ class Form extends React.Component {
       () => {
         this.props.onChangeHandler(this.state);
       }
-    );
+    )}
   };
 
   onChangeInputExperience = (event, experienceId) => {
@@ -135,6 +146,34 @@ class Form extends React.Component {
     
   };
 
+deleteExperienceSect = () => {
+    let experienceSectCount = [...this.state.experienceSectCount];
+    let experienceCollection = [...this.state.experienceCollection];
+
+    experienceCollection.pop();
+    experienceSectCount.pop();
+
+    this.setState({
+        experienceCollection: experienceCollection,
+        experienceSectCount: experienceSectCount
+    }, () => {
+        this.props.onChangeHandler(this.state);
+    });
+}
+
+    deleteEducationSect = ()=>{
+        let educationCount = [...this.state.educationCount]
+        let educationCollection = [...this.state.educationCollection];
+        educationCount.pop()
+        educationCollection.pop()
+        this.setState(
+          {
+            educationCollection:educationCollection,
+            educationCount:educationCount
+          }
+        ,()=>{this.props.onChangeHandler(this.state)})
+    }
+
   render() {
     return (
       <div className="Form">
@@ -151,7 +190,7 @@ class Form extends React.Component {
         <button onClick={this.handleExperienceSect} className="add">
           Add
         </button>
-        <button className="delete">Delete</button>
+        <button onClick={this.deleteExperienceSect} className="delete">Delete</button>
 
         {
             this.state.educationCount.map(educationId=>(
@@ -164,7 +203,7 @@ class Form extends React.Component {
         }
        
         <button onClick={this.handleEducationSect} className="add">Add</button>
-        <button className="delete">Delete</button>
+        <button onClick={this.deleteEducationSect} className="delete">Delete</button>
         <div className="buttons-sect">
           <button className="Genrate">Generate PDF</button>
           <button className="LoadExample">Load Example</button>

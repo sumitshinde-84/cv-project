@@ -7,11 +7,11 @@ constructor(props){
 }
 
 render(){
-    const {profilePreview,address,phoneNumber,email} = this.props
+    const {profile,address,phoneNumber,email} = this.props
     return(
         <div className="personalInfoPreview">
             <div className="profile">
-                <img src={profilePreview} alt="profile"/>
+                <img src={profile} alt="profile"/>
             </div>
             <div className="PersonDetails">
                 <div className="personalDetailDivForBottomBorder">

@@ -10,30 +10,31 @@ class App extends React.Component{
 
     this.state = {
       personalInfo: {
-        firstName: "",
-        lastName: "",
-        title: "",
-        profile: "",
-        phone: "",
-        email: "",
-        description: "",
+        firstName: "Sumit",
+        lastName: "Shinde",
+        title: "Frontend Developer",
+        address:"Ganesh Nagar ,Diva",
+        profile: "https://avatars.githubusercontent.com/u/110285294?v=4",
+        phone: "+91 8422008724",
+        email: "shindesumit217@gmail.com",
+        description: " A frontend developer is a professional who specializes in creating user interfaces (UI) and user experiences (UX) for websites, web applications, and other digital products. They are responsible for designing and implementing the visual and interactive elements of a website or application, with a focus on making it engaging, responsive, and user-friendly.",
       },
       experienceCollection: [
         {
-          position: "",
-          company: "",
-          from: "",
-          to: "",
+          position: "Frontend Developer",
+          company: "Acquire pvt ltd",
+          from: "2020",
+          to: "2022",
         },
       ],
       educationCollection:[
         {
-            university:'',
-            city:'',
-            degree:'',
-            subject:'',
-            from:'',
-            to:''
+            university:'Ramanand Arya D.A.V College',
+            city:'Bhandup',
+            degree:'Bsc',
+            subject:'Information Tech',
+            from:'2021',
+            to:'2023'
       },
 
       ],

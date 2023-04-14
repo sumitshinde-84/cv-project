@@ -6,6 +6,7 @@ import DescriptionPreview from "./Preview_Component/DescriptionPreview";
 import ExperiencePreview from "./Preview_Component/ExperiencePreview";
 import EducationPreview from "./Preview_Component/EducationPreview";
 import Education from "./Form_Component/education";
+import { v4 as uuidv4 } from 'uuid';
 
 class Preview extends React.Component {
 
@@ -36,7 +37,7 @@ class Preview extends React.Component {
             </div>
            
           { experienceCollection.map(experience=>(
-            <ExperiencePreview key={experience.position} from={experience.from} to={experience.to} position={experience.position} company={experience.company} />
+            <ExperiencePreview key={uuidv4()} from={experience.from} to={experience.to} position={experience.position} company={experience.company} />
            ))}
  
           </div>
@@ -47,7 +48,7 @@ class Preview extends React.Component {
             <h3>Education</h3>
           </div>
           {educationCollection.map(education=>(
-             <EducationPreview from={education.from} to={education.to} university={education.university} degree={education.degree} subject={education.subject} city={education.city} />
+             <EducationPreview key={uuidv4()} from={education.from} to={education.to} university={education.university} degree={education.degree} subject={education.subject} city={education.city} />
           ))}
        
         </div>
