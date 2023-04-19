@@ -1,30 +1,15 @@
-import React from "react";
 import "./styles/Preview.css";
 import Header from "./Preview_Component/header";
 import PersonalInfoPreveiw from "./Preview_Component/personalInfo";
 import DescriptionPreview from "./Preview_Component/DescriptionPreview";
 import ExperiencePreview from "./Preview_Component/ExperiencePreview";
 import EducationPreview from "./Preview_Component/EducationPreview";
-import Education from "./Form_Component/education";
 import { v4 as uuidv4 } from 'uuid';
 
-
-class Preview extends React.Component {
-
-  constructor(props) {
-    super(props);
-
+const Preview =({personalInfo, experienceCollection,educationCollection })=> {
     
-  }
-
   
-  
-
-  render() {
-    
-    const { personalInfo, experienceCollection,educationCollection } = this.props;
-    return (
-     
+  return (
       <div  className="preview" >
         <Header firstName={personalInfo.firstName} lastName={personalInfo.lastName} title={personalInfo.title} profile={personalInfo.photo} />
         <PersonalInfoPreveiw profile={personalInfo.profile} address={personalInfo.address} phoneNumber={personalInfo.phone} email={personalInfo.email} />
@@ -58,13 +43,10 @@ class Preview extends React.Component {
           {educationCollection.map(education=>(
              <EducationPreview key={uuidv4()} from={education.from} to={education.to} university={education.university} degree={education.degree} subject={education.subject} city={education.city} />
           ))}
-       
         </div>
-
       </div>
-     
     )
   }
-}
+
 
 export default Preview;

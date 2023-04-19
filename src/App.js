@@ -1,54 +1,49 @@
-import React from "react";
+import { useState } from "react";
 import Form from "./components/form";
 import Preview from "./components/preview";
 import "./styles/App.css"
 import jsPDF from 'jspdf';
-import ReactDOM from 'react-dom';
 import html2canvas from "html2canvas";
 
-class App extends React.Component{
+const App = ()=>{
 
-  constructor(props){
-    super(props)
+  const [personalInfo,setPersonalInfo] = useState( {
+    firstName: "",
+    lastName: "",
+    address:"",
+    title: "",
+    profile: "",
+    phone: "",
+    email: "",
+    description: "",
+  })
 
-    this.state = {
-      personalInfo: {
-        firstName: "Sumit",
-        lastName: "Shinde",
-        title: "Frontend Developer",
-        address:"Ganesh Nagar ,Diva",
-        profile: "https://avatars.githubusercontent.com/u/110285294?v=4",
-        phone: "+91 8422008724",
-        email: "shindesumit217@gmail.com",
-        description: " A frontend developer is a professional who specializes in creating user interfaces (UI) and user experiences (UX) for websites, web applications, and other digital products. They are responsible for designing and implementing the visual and interactive elements of a website or application, with a focus on making it engaging, responsive, and user-friendly.",
+  const [experienceCollection,setExperienceCollection] = useState(
+    [
+      {
+        position: "sss",
+        company: "f",
+        from: "ffff",
+        to: "fffff",
       },
-      experienceCollection: [
-        {
-          position: "Frontend Developer",
-          company: "Acquire pvt ltd",
-          from: "2020",
-          to: "2022",
-        },
-      ],
-      educationCollection:[
-        {
-            university:'Ramanand Arya D.A.V College',
-            city:'Bhandup',
-            degree:'Bsc',
-            subject:'Information Tech',
-            from:'2021',
-            to:'2023'
-      },
+    ]
+  )
 
-      ],
-      educationCount:[0],
-      experienceSectCount: [0],
-    };
+  const [educationCollection,setEducationCollection] = useState(
+    [{
+          university:'',
+          city:'',
+          degree:'',
+          subject:'',
+          from:'',
+          to:''
+    },]
+  )
 
-    this.childComponent1Ref = React.createRef();
-  }
+  const [educationCount,setEducationCount] = useState([0])
+  const [experienceSectCount,setExperienceSectCount] = useState([0])
 
-  genratePdf = () => {
+ const genratePdf = () => {
     const element = document.querySelector(".preview");
     const pdfWidth = element.offsetWidth;
     const pdfHeight = element.offsetHeight;
@@ -62,14 +57,15 @@ class App extends React.Component{
     });
   };
 
-  onChangeHandler=(obj)=>{
-    this.setState({
-      ...obj
-    })
+ const onChangeHandler=(personalInfo,educationCollection,educationCount,experienceCollection,experienceSectCount)=>{
+   setPersonalInfo({...personalInfo})
+   setExperienceCollection([...experienceCollection])
+   setEducationCollection([...educationCollection])
+   setEducationCount([...educationCount])
+   setExperienceSectCount([...experienceSectCount])
   }
 
-  render(){
-    console.log(this.state.personalInfo)
+
     return(
       <div className="main">
         <header>
@@ -77,12 +73,11 @@ class App extends React.Component{
         </header>
         <div className="Form-preview-container">
           
-          <Form genratePdf={this.genratePdf} onChangeHandler={this.onChangeHandler}  />
-          <Preview   personalInfo={this.state.personalInfo}  experienceCollection={this.state.experienceCollection} educationCollection={this.state.educationCollection}  />
+          <Form genratePdf={genratePdf} onChangeHandler={onChangeHandler}  />
+          <Preview   personalInfo={personalInfo}  experienceCollection={experienceCollection} educationCollection={educationCollection}  />
         </div>
       </div>
     )
   }
-}
 
 export default App;
