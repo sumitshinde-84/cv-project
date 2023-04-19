@@ -1,9 +1,6 @@
-import React from "react";
 import "./style/personalInfoPreview.css";
 const PersonalInfoPreveiw = ({ profile, address, phoneNumber, email }) => {
-  
-  
-  
+
     return (
     <div className="personalInfoPreview">
       <div className="profile">
