@@ -1,16 +1,10 @@
 import React from "react";
 import "./style/experiencePreview.css"
 
-class ExperiencePreview extends React.Component{
 
-constructor(props){
-    super()
-}
+const ExperiencePreview=({position,from,to,company})=> {
 
 
-render(){
-
-    const {position,from,to,company} = this.props
 return (
     
     <div className="experiencePreview">
@@ -26,12 +20,6 @@ return (
         </div>
     </div>
 
-)
-
-
-}
-
-
-}
+)}
 
 export default ExperiencePreview
