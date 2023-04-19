@@ -1,20 +1,6 @@
-
-import React from "react";
-import Experience from "./experience";
 import "./style/personal_info.css"
 
-class PersonlInfo extends React.Component{
-
-constructor(props){
-    super()
-}
-
-
-
-
-
-render(){
-    const {personalInfo,onChangeInputPersonalInfo} = this.props
+const PersonlInfo =({personalInfo,onChangeInputPersonalInfo})=>{
 
     return(
         <div className="personal_info">
@@ -32,9 +18,6 @@ render(){
     )
 }
 
-
-
-}
 
 
 export default PersonlInfo

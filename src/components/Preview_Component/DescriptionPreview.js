@@ -1,14 +1,9 @@
 import React from "react";
 import "./style/descriptionPreview.css"
-class DescriptionPreview extends React.Component{
-
-    constructor(props){
-        super()
-    }
+const DescriptionPreview =({description})=>{
 
 
-render(){
-    const {description} =this.props
+   
     return(
         <div className="DescriptionPreview">
          
@@ -17,10 +12,8 @@ render(){
           </p>
         </div>
     )
-
-
 }
 
-}
+
 
 export default DescriptionPreview
