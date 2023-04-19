@@ -1,20 +1,9 @@
-import React from "react";
 import "./style/educationPreview.css"
 
-class EducationPreview extends React.Component{
+const EducationPreview =({from, to ,university,subject,degree,city})=>{
 
-constructor(props){
-    super()
-}
-
-
-render(){
-
-    const {from, to ,university,subject,degree,city} = this.props
 return (
-    
     <div className="educationPreview">
-       
         <div className="educationTabel">
             <div className="TimeFrame">
                 <p id="timeFrameEducation">{from +"-"+ to}</p>
@@ -27,12 +16,6 @@ return (
         </div>
     </div>
 
-)
-
-
-}
-
-
-}
+)}
 
 export default EducationPreview
